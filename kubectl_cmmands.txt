@@ -1,5 +1,18 @@
 command: kubectl get pods --context <context_name> -n <name_space>
-descriptions: Checking running pods and job list
+descriptions: checking running pods and job list
+
+
+command: kubectl exec -it <pod_name> sh --context --context <context_name> -n <name_space>
+descriptions: access a single pod
+
+
+command: kubectl logs <pod_name> --context --context <context_name> -n <name_space>
+descriptions: get pod logs
+
+
+command: kubectl describe <pod_name> --context --context <context_name> -n <name_space>
+descriptions: check pod description
+
 
 command: kubectl delete pods <pod_name> --context <context_name> -n <name_space>
 descriptions: pod delate
