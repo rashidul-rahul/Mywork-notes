@@ -1,0 +1,33 @@
+command: kubectl get pods --context <context_name> -n <name_space>
+descriptions: Checking running pods and job list
+
+command: kubectl delete pods <pod_name> --context <context_name> -n <name_space>
+descriptions: pod delate
+
+
+command: kubectl get cronjob --context <context_name> -n <name_space>
+descriptions:get cronjobs list
+
+
+command: kubectl delete cronjob <cronjob_name> --context <context_name> -n <name_space>
+descriptions:get cronjobs list
+
+
+command: kubectl top pods --context <context_name> -n <name_space> | sort -nk 2
+descriptions: Checking pods help.
+
+
+command: kubectl get hpa --context <context_name> -n <name_space>
+descriptions: check pods auto scale config
+
+
+command: kubectl get deployment <pod name> -o yaml --context <context_name> -n <name_space>
+descriptions: view deployment file for that pod
+
+
+command: kubectl edit deployment <pod name> --context <context_name> -n <name_space>
+descriptions: edit pods deployment yml config
+
+
+command: kubectl cp <local_file_location> <name_space>/<pod name>:/usr/local/app/<remote_file_location>/ --context <context_name>
+descriptions: copy local file to pod file
